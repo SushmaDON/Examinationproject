@@ -1,0 +1,40 @@
+<!--SCORES PAGE-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scores</title>
+  <style>
+  	body{ 
+             background-color: ghostwhite;
+            }
+         h1{
+            color: blue;
+            font-style: verdana;
+            text-align: center;
+            font-size: 80px;
+           }
+         p{
+            color: red;
+            font-style: verdana;
+            text-align: center;
+            font-size: 60px;
+            border: 10px solid black;
+            padding: 20px;
+            margin: 150px;
+           }
+  </style>
+</head>
+<body>
+  <h1>Your Score</h1>
+  <p id="totalMarks"></p>
+  <script>
+    // Retrieve responses and total marks from sessionStorage
+    const responses = JSON.parse(sessionStorage.getItem('responses'));
+    const totalMarks = sessionStorage.getItem('totalMarks');
+
+    // Display responses and total marks on the page
+    document.getElementById('totalMarks').innerText = `Total Marks: ${totalMarks}/100`;
+  </script>
+</body>
+</html>

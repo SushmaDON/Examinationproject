@@ -1,0 +1,148 @@
+<!-- EXAMINATION PAGE -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EXAMINATION PAGE</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src = "questions.js"></script>
+	<style>
+		* {
+  		   box-sizing: border-box;
+		  }
+
+		body {
+  		      font-family: Arial, Helvetica, sans-serif;
+		     }
+
+		header {
+  		        background-color: black;
+                        font-size: 15px;
+                        padding: 1px;
+                        color: white;
+                        height: 50px;
+		       }
+		nav {
+  float: right;
+  width: 30%;
+  height: 650px;
+  background: lightgray;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 200%;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav li {
+  flex-basis: calc(33.33% - 10px);
+  margin-bottom: 10px;
+}
+
+nav button {
+  width: 50%;
+}
+
+		article {
+  			 float: left;
+  			 padding: 20px;
+  			 width: 70%;
+                         height: 650px;
+  			 background-color: ghostwhite;
+			}
+
+		section::after {
+  				content: "";
+ 			        display: table;
+  			        clear: both;
+			       }
+
+		footer {
+  			background-color: black;
+  			padding: 10px;
+                        height: 5%;
+  			text-align: center;
+  			color: white;
+		       }
+		@media (max-width: 600px) {
+  					   nav, article {
+   							 width: 100%;
+   							 height: auto;
+ 						        }
+					  }
+		h3{
+                   font-size:200%;
+                   border: 1px solid darkgray;
+                   background-color: darkgray;
+                   padding: 10px;
+                  }
+
+	</style>
+</head>
+<body onload = "loadQuestion(0)">
+
+	<header>
+   		 <h2 style="margin:2px; padding:10px">Answer the following</h2>
+	</header>
+
+	<section id = "question">
+ 		 <nav>
+ 			 <h3> Question Palette </h3>
+                         <p style="font-size:150%">Choose a Question </p>
+   			 <ul>
+     				 <li><button onclick = "loadQuestion(0)">1</button></li>
+     				 <li><button onclick = "loadQuestion(1)">2</button></li>
+     				 <li><button onclick = "loadQuestion(2)">3</button></li>
+     				 <li><button onclick = "loadQuestion(3)">4</button></li>
+     				 <li><button onclick = "loadQuestion(4)">5</button></li>
+     				 <li><button onclick = "loadQuestion(5)">6</button></li>
+     				 <li><button onclick = "loadQuestion(6)">7</button></li>
+     				 <li><button onclick = "loadQuestion(7)">8</button></li>
+     				 <li><button onclick = "loadQuestion(8)">9</button></li>
+     				 <li><button onclick = "loadQuestion(9)">10</button></li>
+				 <li><button onclick = "loadQuestion(10)">11</button></li>
+     				 <li><button onclick = "loadQuestion(11)">12</button></li>
+     				 <li><button onclick = "loadQuestion(12)">13</button></li>
+     				 <li><button onclick = "loadQuestion(13)">14</button></li>
+     				 <li><button onclick = "loadQuestion(14)">15</button></li>
+     				 <li><button onclick = "loadQuestion(15)">16</button></li>
+     				 <li><button onclick = "loadQuestion(16)">17</button></li>
+     				 <li><button onclick = "loadQuestion(17)">18</button></li>
+     				 <li><button onclick = "loadQuestion(18)">19</button></li>
+     				 <li><button onclick = "loadQuestion(19)">20</button></li>
+                                 <li><button onclick = "loadQuestion(20)">21</button></li>
+     				 <li><button onclick = "loadQuestion(21)">22</button></li>
+     				 <li><button onclick = "loadQuestion(22)">23</button></li>
+     				 <li><button onclick = "loadQuestion(23)">24</button></li>
+     				 <li><button onclick = "loadQuestion(24)">25</button></li>
+      				 
+    			</ul>
+  		</nav>
+  
+		<article>
+  
+			<h1>Question 1</h1>
+                	<p>What is the capital of france?</p>
+			<input type = "radio" name = "q1" value = "a">A. Paris<br>
+			<input type = "radio" name = "q1" value = "b">B. London<br>
+			<input type = "radio" name = "q1" value = "c">C. Rome<br>
+			<input type = "radio" name = "q1" value = "d">D. Berlin<br>
+    
+        	</article>
+	</section>
+
+	<footer>
+  		<button onclick = "submission()">Submit</button>
+	</footer>
+
+</body>
+</html>
+

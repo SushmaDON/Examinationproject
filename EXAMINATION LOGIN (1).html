@@ -1,0 +1,86 @@
+<!-- ONLINE EXAMINATON LOGIN PAGE -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EXAMINATION LOGIN</title>
+	<style>
+	 body{
+              background-color: ghostwhite;
+             }
+	 fieldset{
+                  background-color: lightgray;
+                  display: block;
+                  margin-left: 500px;
+                  margin-right: 500px;
+                  margin-top: 50px;
+                 }
+	 legend{
+                background-color: black;
+                color: white;
+                font-size: 40px;
+                font-style: verdana;
+               }
+	 input{
+               margin: 10px;
+               font-size: 20px;
+              }
+	 
+	 label{
+               font-size: 30px;
+              }
+	 h1{
+            color: blue;
+            font-style: verdana;
+            text-align: center;
+            font-size: 80px;
+           }
+	</style>
+</head>
+<body>
+	<h1>Examination Login</h1>
+	<form>
+	<fieldset>
+	 <legend> Candidate Login </legend>
+		<label for="regno">Register Number:</label>
+		<input type="text" id="regno" name="regno" placeholder = "12 digit number" maxlength = "12" required><br><br>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" placeholder = "ddmmyyyy" maxlength = "8" required><br><br>
+		<input type="button" value="Login" onclick="validate()"><br><br>
+		<p id="message"></p>
+        </fieldset>
+	</form>
+
+	<script>
+		var users = [
+				{ regno: "320106411001", password: "01012002", instructions: "INSTRUCTIONS.html" },
+				{ regno: "320106411002", password: "02012002", instructions: "INSTRUCTIONS.html" },
+				{ regno: "320106411003", password: "03012002", instructions: "INSTRUCTIONS.html" },
+				{ regno: "320106411004", password: "04012002", instructions: "INSTRUCTIONS.html" },
+				{ regno: "320106411005", password: "05012002", instructions: "INSTRUCTIONS.html" },
+				{ regno: "320106411006", password: "06012002", instructions: "INSTRUCTIONS.html" },
+				{ regno: "320106411007", password: "07012002", instructions: "INSTRUCTIONS.html" },
+				{ regno: "320106411008", password: "08012002", instructions: "INSTRUCTIONS.html" },
+				{ regno: "320106411009", password: "09012002", instructions: "INSTRUCTIONS.html" },
+				{ regno: "320106411010", password: "10012002", instructions: "INSTRUCTIONS.html" },
+			
+		            ];
+
+		function validate() {
+			             var regno = document.getElementById("regno").value;
+			             var password = document.getElementById("password").value;
+
+			             for (var i = 0; i < users.length; i++) 
+                                     {
+				      if (regno == users[i].regno && password == users[i].password) 
+                                      {
+				  	window.location.href = users[i].instructions;
+					return;
+				      }
+			             }
+
+			             document.getElementById("message").innerHTML = "Invalid credentials. Please try again.";
+		                    }
+	</script>
+</body>
+</html>
